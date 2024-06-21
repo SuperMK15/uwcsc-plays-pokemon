@@ -9,10 +9,11 @@ from TwitchPlays_KeyCodes import *
 ##################### GAME VARIABLES #####################
 
 TWITCH_CHANNEL = 'uwcsclub'
+BUTTON_DOWN_TIME = 0.25
 
 ##################### MESSAGE QUEUE VARIABLES #####################
 
-MESSAGE_RATE = 0.5
+MESSAGE_RATE = 0.1
 MAX_QUEUE_LENGTH = 20
 MAX_WORKERS = 100
 
@@ -45,29 +46,31 @@ def handle_message(message):
         # Use the "HoldAndReleaseKey(KEYCODE, SECONDS)" function press down a key for X seconds, then release it.
         # Use the pydirectinput library to press or move the mouse
 
-        if msg == "up": 
-            HoldAndReleaseKey(UP_ARROW, 1)
 
-        if msg == "down": 
-            HoldAndReleaseKey(DOWN_ARROW, 1)
+
+        if msg == "up" or msg == "u": 
+            HoldAndReleaseKey(W, BUTTON_DOWN_TIME)
+
+        if msg == "down" or msg == "d": 
+            HoldAndReleaseKey(S, BUTTON_DOWN_TIME)
         
-        if msg == "left":
-            HoldAndReleaseKey(LEFT_ARROW, 1)
+        if msg == "left" or msg == "l":
+            HoldAndReleaseKey(A, BUTTON_DOWN_TIME)
         
-        if msg == "right":
-            HoldAndReleaseKey(RIGHT_ARROW, 1)
+        if msg == "right" or msg == "r":
+            HoldAndReleaseKey(D, BUTTON_DOWN_TIME)
 
         if msg == "shift":
-            HoldAndReleaseKey(LEFT_SHIFT, 1)
+            HoldAndReleaseKey(LEFT_SHIFT, BUTTON_DOWN_TIME)
 
         if msg == "menu":
-            HoldAndReleaseKey(ENTER, 1)
+            HoldAndReleaseKey(ENTER, BUTTON_DOWN_TIME)
 
-        if msg == "select":
-            HoldAndReleaseKey(A, 1)
+        if msg == "select" or msg == "a":
+            HoldAndReleaseKey(X, BUTTON_DOWN_TIME)
 
-        if msg == "back":
-            HoldAndReleaseKey(B, 1)
+        if msg == "back" or msg == "b":
+            HoldAndReleaseKey(Z, BUTTON_DOWN_TIME)
 
         ####################################
         ####################################
