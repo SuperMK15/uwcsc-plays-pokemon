@@ -100,7 +100,7 @@ class Twitch:
 
                 if matches[0].start() != 0:
                     # If we get here, we might have missed a message. pepeW
-                    print('either ddarknut fucked up or twitch is bonkers, or both I mean who really knows anything at this point')
+                    print('might have missed a message...')
 
             return res
 
