@@ -13,7 +13,7 @@ BUTTON_DOWN_TIME = 0.25
 
 ##################### MESSAGE QUEUE VARIABLES #####################
 
-MESSAGE_RATE = 0.1
+MESSAGE_RATE = 0.25
 MAX_QUEUE_LENGTH = 20
 MAX_WORKERS = 100
 
@@ -45,8 +45,6 @@ def handle_message(message):
         # Use the "ReleaseKey(KEYCODE)" function to release a specific keyboard key.
         # Use the "HoldAndReleaseKey(KEYCODE, SECONDS)" function press down a key for X seconds, then release it.
         # Use the pydirectinput library to press or move the mouse
-
-
 
         if msg == "up" or msg == "u": 
             HoldAndReleaseKey(W, BUTTON_DOWN_TIME)
